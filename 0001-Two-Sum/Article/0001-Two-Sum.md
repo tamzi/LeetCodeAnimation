@@ -1,15 +1,18 @@
 # LeetCode 第 1 号问题：两数之和
 
-> 本文首发于公众号「图解面试算法」，是 [图解 LeetCode ](<https://github.com/MisterBooo/LeetCodeAnimation>) 系列文章之一。
+> 本文首发于公众号「图解面试算法」，是
+> [图解 LeetCode ](https://github.com/MisterBooo/LeetCodeAnimation) 系列文章之一
+> 。
 >
 > 同步博客：https://www.algomooc.com
->
 
-题目来源于 LeetCode 上第 1 号问题：两数之和。题目难度为 Easy，目前通过率为 45.8% 。
+题目来源于 LeetCode 上第 1 号问题：两数之和。题目难度为 Easy，目前通过率为 45.8%
+。
 
 ### 题目描述
 
-给定一个整数数组 `nums` 和一个目标值 `target`，请你在该数组中找出和为目标值的那 **两个** 整数，并返回他们的数组下标。
+给定一个整数数组 `nums` 和一个目标值 `target`，请你在该数组中找出和为目标值的那
+**两个** 整数，并返回他们的数组下标。
 
 你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。
 
@@ -28,16 +31,19 @@
 
 设置一个 map 容器 record 用来记录元素的值与索引，然后遍历数组 nums。
 
-* 每次遍历时使用临时变量 complement 用来保存目标值与当前值的差值
-* 在此次遍历中查找 record ，查看是否有与 complement 一致的值，如果查找成功则返回查找值的索引值与当前变量的值 i
-* 如果未找到，则在 record 保存该元素与索引值 i
+- 每次遍历时使用临时变量 complement 用来保存目标值与当前值的差值
+- 在此次遍历中查找 record ，查看是否有与 complement 一致的值，如果查找成功则返回
+  查找值的索引值与当前变量的值 i
+- 如果未找到，则在 record 保存该元素与索引值 i
 
 ### 动画描述
 
 ![](../Animation/Animation.gif)
 
 ### 代码实现
+
 #### C++
+
 ```
 // 1. Two Sum
 // https://leetcode.com/problems/two-sum/description/
@@ -48,7 +54,7 @@ public:
     vector<int> twoSum(vector<int>& nums, int target) {
         unordered_map<int,int> record;
         for(int i = 0 ; i < nums.size() ; i ++){
-       
+
             int complement = target - nums[i];
             if(record.find(complement) != record.end()){
                 int res[] = {i, record[complement]};
@@ -62,7 +68,9 @@ public:
 };
 
 ```
+
 #### C
+
 ```c
 // 1. Two Sum
 // https://leetcode.com/problems/two-sum/description/
@@ -74,7 +82,7 @@ public:
 int* twoSum(int* nums, int numsSize, int target, int* returnSize){
     int *ans=(int *)malloc(2 * sizeof(int));
     int i,j;
-    bool flag=false; 
+    bool flag=false;
     for(i=0;i<numsSize-1;i++)
     {
         for(j=i+1;j<numsSize;j++)
@@ -96,7 +104,9 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
     return ans;
 }
 ```
+
 #### Java
+
 ```
 // 1. Two Sum
 // https://leetcode.com/problems/two-sum/description/
@@ -118,13 +128,15 @@ class Solution {
                 }
             }
         }
-        
+
         return ans;
-        
+
     }
 }
 ```
+
 #### Python
+
 ```
 # 1. Two Sum
 # https://leetcode.com/problems/two-sum/description/
@@ -143,6 +155,6 @@ class Solution(object):
                     print([i,j])
                     break
         return ans
-  ```      
+```
 
 ![](../../Pictures/qrcode.jpg)

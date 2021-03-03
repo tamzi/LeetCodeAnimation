@@ -1,10 +1,12 @@
-## LeetCode第942号问题：增减字符串匹配
+## LeetCode 第 942 号问题：增减字符串匹配
 
-> 本文首发于公众号「图解面试算法」，是 [图解 LeetCode ](<https://github.com/MisterBooo/LeetCodeAnimation>) 系列文章之一。
+> 本文首发于公众号「图解面试算法」，是
+> [图解 LeetCode ](https://github.com/MisterBooo/LeetCodeAnimation) 系列文章之一
+> 。
 >
 > 同步个人博客：www.zhangxiaoshuai.fun
 
-本题在leetcode中题目序号942，属于easy级别，目前通过率为71.4%
+本题在 leetcode 中题目序号 942，属于 easy 级别，目前通过率为 71.4%
 
 ### 题目描述：
 
@@ -43,7 +45,7 @@
 3.遇见‘I’，要增加；遇见‘D’要减少；
 ```
 
-### GIF动画演示：
+### GIF 动画演示：
 
 ![](../Animation/0942-di-String-Match01.gif)
 
@@ -66,7 +68,9 @@ public int[] diStringMatch(String S) {
 }
 ```
 
-**虽然上述代码很简洁，好像已经不需要我们去实现什么；但是满足条件的序列并不止一种，官方的好像只能通过一种，下面的代码虽然有些冗余，但是得出的序列是满足题意要求的，但是并不能AC；**
+**虽然上述代码很简洁，好像已经不需要我们去实现什么；但是满足条件的序列并不止一种
+，官方的好像只能通过一种，下面的代码虽然有些冗余，但是得出的序列是满足题意要求的
+，但是并不能 AC；**
 
 ### 思路：
 
@@ -80,7 +84,7 @@ public int[] diStringMatch(String S) {
 对于‘D’，也是同样的思路；
 ```
 
-### GIF动画演示：
+### GIF 动画演示：
 
 ![](../Animation/0942-di-String-Match02.gif)
 
