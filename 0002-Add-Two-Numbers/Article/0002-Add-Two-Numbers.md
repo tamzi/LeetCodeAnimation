@@ -1,14 +1,18 @@
 # LeetCode 第 2 号问题：两数相加
 
-> 本文首发于公众号「图解面试算法」，是 [图解 LeetCode ](<https://github.com/MisterBooo/LeetCodeAnimation>) 系列文章之一。
+> 本文首发于公众号「图解面试算法」，是
+> [图解 LeetCode ](https://github.com/MisterBooo/LeetCodeAnimation) 系列文章之一
+> 。
 >
 > 同步博客：https://www.algomooc.com
 
-题目来源于 LeetCode 上第 2 号问题：两数相加。题目难度为 Medium，目前通过率为 33.9% 。
+题目来源于 LeetCode 上第 2 号问题：两数相加。题目难度为 Medium，目前通过率为
+33.9% 。
 
 ### 题目描述
 
-给出两个 **非空** 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 **逆序** 的方式存储的，并且它们的每个节点只能存储 **一位** 数字。
+给出两个 **非空** 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 **逆
+序** 的方式存储的，并且它们的每个节点只能存储 **一位** 数字。
 
 如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。
 
@@ -24,7 +28,8 @@
 
 ### 题目解析
 
-设立一个表示进位的变量`carried`，建立一个新链表，把输入的两个链表从头往后同时处理，每两个相加，将结果加上`carried`后的值作为一个新节点到新链表后面。
+设立一个表示进位的变量`carried`，建立一个新链表，把输入的两个链表从头往后同时处
+理，每两个相加，将结果加上`carried`后的值作为一个新节点到新链表后面。
 
 ### 动画描述
 
@@ -33,6 +38,7 @@
 ### 代码实现
 
 #### C++
+
 ```c++
 /// 时间复杂度: O(n)
 /// 空间复杂度: O(n)
@@ -71,7 +77,9 @@ public:
 };
 
 ```
+
 #### Java
+
 ```java
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -96,7 +104,7 @@ class Solution {
             carry = sum / 10;
             cur.next = new ListNode(sum % 10);
             cur = cur.next;
-    
+
         }
         if (carry > 0) {
             cur.next = new ListNode(carry);
@@ -105,7 +113,9 @@ class Solution {
     }
 }
 ```
+
 #### Python
+
 ```python
 class Solution(object):
     def addTwoNumbers(self, l1, l2):
@@ -134,6 +144,4 @@ class Solution(object):
         return head
 ```
 
-
 ![](../../Pictures/qrcode.jpg)
-

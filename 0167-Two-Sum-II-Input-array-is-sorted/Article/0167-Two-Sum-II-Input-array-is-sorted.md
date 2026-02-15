@@ -1,10 +1,13 @@
 # LeetCode 第 167 号问题：两数之和 II - 输入有序数组
 
-> 本文首发于公众号「图解面试算法」，是 [图解 LeetCode ](<https://github.com/MisterBooo/LeetCodeAnimation>) 系列文章之一。
+> 本文首发于公众号「图解面试算法」，是
+> [图解 LeetCode ](https://github.com/MisterBooo/LeetCodeAnimation) 系列文章之一
+> 。
 >
 > 同步博客：https://www.algomooc.com
 
-题目来源于 LeetCode 上第 167 号问题：两数之和 II - 输入有序数组。题目难度为 Easy，目前通过率为 48.2% 。
+题目来源于 LeetCode 上第 167 号问题：两数之和 II - 输入有序数组。题目难度为
+Easy，目前通过率为 48.2% 。
 
 ### 题目描述
 
@@ -31,16 +34,21 @@
 
 根据**已排序**这个特性，
 
-- （1）如果 numbers[left] 与 numbers[right] 的和 tmp 小于 target ，说明应该增加 tmp ，因此 left 右移指向一个较大的值。
-- （2）如果 tmp大于 target ，说明应该减小 tmp ，因此 right 左移指向一个较小的值。
-- （3）tmp 等于 target ，则找到，返回 left + 1 和 right + 1。（注意以 1 为起始下标）
+- （1）如果 numbers[left] 与 numbers[right] 的和 tmp 小于 target ，说明应该增加
+  tmp ，因此 left 右移指向一个较大的值。
+- （2）如果 tmp 大于 target ，说明应该减小 tmp ，因此 right 左移指向一个较小的值
+  。
+- （3）tmp 等于 target ，则找到，返回 left + 1 和 right + 1。（注意以 1 为起始下
+  标）
 
 ### 动画描述
 
 ![](../Animation/Animation.gif)
 
 ### 代码实现
+
 #### C++
+
 ```c++
 // 对撞指针
 // 时间复杂度: O(n)
@@ -70,7 +78,9 @@ public:
     }
 };
 ```
+
 #### Java
+
 ```java
 class Solution {
     public int[] twoSum(int[] numbers, int target) {
@@ -92,12 +102,14 @@ class Solution {
                 left++;
             }
         }
-        
+
         return new int[]{-1, -1};
     }
 }
 ```
+
 #### Python
+
 ```python
 class Solution(object):
     def twoSum(self, numbers, target):
@@ -113,8 +125,5 @@ class Solution(object):
 
         return [-1, -1]
 ```
-
-
-
 
 ![](../../Pictures/qrcode.jpg)
